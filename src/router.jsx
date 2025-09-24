@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router'
-import HomePage from '@/Pages/Home'
-import TVShowsPage from '@/Pages/TvShows'
-import MoviesPage from '@/pages/Movies'
+import Home from '@/Pages/Home'
+import TvShows from '@/Pages/TvShows'
+import Movies from '@/Pages/Movies'
 import NewAndPopular from '@/pages/NewAndPopular'
 import ContentDetail from '@/pages/ContentDetail'
 import NotFoundPage from '@/pages/NotFoundPage'
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
                 path: 'browse',
                 element: (
                     <ProtectedRoute>
-                        <HomePage />
+                        <Home />
                     </ProtectedRoute>
                 ),
             },
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
                 path: 'tv-shows',
                 element: (
                     <ProtectedRoute>
-                        <TVShowsPage />
+                        <TvShows />
                     </ProtectedRoute>
                 ),
             },
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
                 path: 'movies',
                 element: (
                     <ProtectedRoute>
-                        <MoviesPage />
+                        <Movies />
                     </ProtectedRoute>
                 ),
             },
