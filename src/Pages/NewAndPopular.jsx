@@ -6,7 +6,7 @@ import {
 import TitleCards from '@/Components/TitleCards'
 import FeaturedShow from '@/Components/FeaturedShow'
 
-const NewAndPopular = () => {
+function NewAndPopular() {
     return (
         <div className="min-h-screen bg-black text-white ">
             {/* Hero Section */}
