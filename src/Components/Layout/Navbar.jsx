@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router'
 import useAuth from '@/CustomHooks/useAuth.jsx'
 import { useWindowScroll } from 'react-use'
 import userLogo from '@/assets/profileImg.png'
-import Logo from '@/Components/common/Logo.jSX'
+import Logo from '@/Components/common/Logo.jsx'
 const Navbar = () => {
     const [showSearch, setShowSearch] = useState(false)
     const [searchQuery, setSearchQuery] = useState('')
