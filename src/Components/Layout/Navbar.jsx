@@ -3,7 +3,7 @@ import { FaSearch, FaCaretDown, FaBars, FaTimes } from 'react-icons/fa'
 import { NavLink, useNavigate } from 'react-router'
 import useAuth from '../../CustomHooks/useAuth'
 import { useWindowScroll } from 'react-use'
-import userLogo from '../../assets/profile_img.png'
+import userLogo from '../../assets/profileImg.png'
 import Logo from '../common/Logo'
 const Navbar = () => {
     const [showSearch, setShowSearch] = useState(false)

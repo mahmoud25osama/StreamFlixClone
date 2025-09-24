@@ -6,8 +6,8 @@ import {
     getPopularMovies,
 } from '../services/tmdbService'
 
-import heroImage from '../assets/hero_banner.jpg'
-import heroTitle from '../assets/hero_title.png'
+import heroImage from '../assets/heroBanner.jpg'
+import heroTitle from '../assets/heroTitle.png'
 import TitleCards from '../Components/TitleCards'
 import { Link } from 'react-router'
 import { useState } from 'react'

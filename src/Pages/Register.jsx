@@ -10,7 +10,7 @@ import {
     FaArrowRight,
 } from 'react-icons/fa'
 import { NavLink, useLocation, useNavigate } from 'react-router'
-import background_banner from '../assets/background_banner.jpg'
+import background_banner from '../assets/bgBanner.jpg'
 import useAuth from '../CustomHooks/useAuth'
 import { useEffect } from 'react'
 import Logo from '@/Components/common/Logo'
