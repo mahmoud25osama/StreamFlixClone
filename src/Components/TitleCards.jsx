@@ -6,7 +6,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel'
-import CardUi from './common/Card'
+import CardUi from '@/Components/common/Card'
 
 const TitleCards = ({ title, fetchFunction, type = 'movie' }) => {
     const [cards, setCards] = useState([])

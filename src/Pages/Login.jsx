@@ -3,8 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { FaEye, FaEyeSlash, FaSpinner } from 'react-icons/fa'
 import { NavLink, useNavigate } from 'react-router'
-import background_banner from '../assets/bgBanner.jpg'
-import useAuth from '../CustomHooks/useAuth'
+import background_banner from '@/assets/bgBanner.jpg'
+import useAuth from '@/CustomHooks/useAuth'
 import Logo from '@/Components/common/Logo'
 
 // Validation Schema

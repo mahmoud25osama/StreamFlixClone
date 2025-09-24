@@ -1,7 +1,7 @@
 import Logo from '@/Components/common/Logo'
 import { useState } from 'react'
 import { FaPlay, FaCheck, FaStar, FaHeart } from 'react-icons/fa'
-import bgHero from '../assets/bgBanner.jpg'
+import bgHero from '@/assets/bgBanner.jpg'
 import { useNavigate } from 'react-router'
 import FaqDataSection from '@/Components/common/FaqDataSection'
 const FEATURES = [

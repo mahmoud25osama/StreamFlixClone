@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { supabase } from '../supabaseClient'
-import { getMovieDetails, getTvDetails } from '../services/tmdbService'
+import { supabase } from '@/supabaseClient'
+import { getMovieDetails, getTvDetails } from '@/services/tmdbService'
 import useAuth from './useAuth'
 import { toast } from 'sonner'
 import { showToast } from '@/Components/common/showToast'

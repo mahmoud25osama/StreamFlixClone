@@ -2,9 +2,9 @@ import {
     getUpcomingMovies,
     getTopRated,
     getTrending,
-} from '../services/tmdbService'
-import TitleCards from '../Components/TitleCards'
-import FeaturedShow from '../Components/FeaturedShow'
+} from '@/services/tmdbService'
+import TitleCards from '@/Components/TitleCards'
+import FeaturedShow from '@/Components/FeaturedShow'
 
 const NewAndPopular = () => {
     return (

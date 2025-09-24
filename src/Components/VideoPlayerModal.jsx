@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { FaTimes } from 'react-icons/fa'
 import { useState } from 'react'
-import { getTrailerKey } from '../services/tmdbService'
-import Logo from './common/Logo'
+import { getTrailerKey } from '@/services/tmdbService'
+import Logo from '@/Components/common/Logo'
 
 const VideoPlayerModal = ({ isOpen, onClose, id, type, title = '' }) => {
     const [trailerUrl, setTrailerUrl] = useState(null)

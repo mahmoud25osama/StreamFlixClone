@@ -1,6 +1,6 @@
-import { useMyList } from '../CustomHooks/useMyList'
-import LoadingSpinner from '../Components/common/LoadingSpinner'
-import ErrorMessage from '../Components/common/ErrorMessage'
+import { useMyList } from '@/CustomHooks/useMyList'
+import LoadingSpinner from '@/Components/common/LoadingSpinner'
+import ErrorMessage from '@/Components/common/ErrorMessage'
 import CardUi from '@/Components/common/Card'
 
 function MyList() {

@@ -3,9 +3,9 @@ import {
     getTrendingMovies,
     getTopRated,
     getMovieByGenre,
-} from '../services/tmdbService'
-import TitleCards from '../Components/TitleCards'
-import FeaturedShow from '../Components/FeaturedShow'
+} from '@/services/tmdbService'
+import TitleCards from '@/Components/TitleCards'
+import FeaturedShow from '@/Components/FeaturedShow'
 
 function Movies() {
     return (

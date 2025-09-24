@@ -1,5 +1,3 @@
-// Components/common/showToast.js
-
 export const showToast = (title, message) => {
     const baseStyle = 'flex items-center gap-2 '
 
