@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { FaSearch, FaCaretDown, FaBars, FaTimes } from 'react-icons/fa'
 import { NavLink, useNavigate } from 'react-router'
-import useAuth from '@/CustomHooks/useAuth'
+import useAuth from '@/CustomHooks/useAuth.JSX'
 import { useWindowScroll } from 'react-use'
 import userLogo from '@/assets/profileImg.png'
-import Logo from '@/Components/common/Logo'
+import Logo from '@/Components/common/Logo.JSX'
 const Navbar = () => {
     const [showSearch, setShowSearch] = useState(false)
     const [searchQuery, setSearchQuery] = useState('')

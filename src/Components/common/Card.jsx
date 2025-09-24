@@ -3,7 +3,7 @@ import {
     CardContent,
     CardHeader,
     CardTitle,
-} from '@/components/ui/card.jsx'
+} from '@/Components/ui/card.jsx'
 import { useMyList } from '@/CustomHooks/useMyList.jsx'
 import { FaPlay, FaPlus, FaStar } from 'react-icons/fa'
 import { useNavigate } from 'react-router'
