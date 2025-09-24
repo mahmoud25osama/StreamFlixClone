@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaSearch, FaCaretDown, FaBars, FaTimes } from 'react-icons/fa'
 import { NavLink, useNavigate } from 'react-router'
-import useAuth from '@/CustomHooks/useAuth.JSX'
+import useAuth from '@/CustomHooks/useAuth.jsx'
 import { useWindowScroll } from 'react-use'
 import userLogo from '@/assets/profileImg.png'
 import Logo from '@/Components/common/Logo.JSX'
