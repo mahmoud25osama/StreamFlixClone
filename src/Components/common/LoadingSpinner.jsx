@@ -1,4 +1,4 @@
-import Logo from './Logo'
+import Logo from './Logo.jsx'
 
 const LoadingSpinner = ({
     width = 250,

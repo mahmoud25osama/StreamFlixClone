@@ -5,8 +5,8 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from '@/components/ui/carousel'
-import CardUi from '@/Components/common/Card'
+} from '@/components/ui/carousel.jsx'
+import CardUi from '@/Components/common/Card.jsx'
 
 const TitleCards = ({ title, fetchFunction, type = 'movie' }) => {
     const [cards, setCards] = useState([])

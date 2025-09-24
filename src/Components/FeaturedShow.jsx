@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
-import VideoPlayerModal from '@/Components/VideoPlayerModal'
-import PlayerBtn from '@/Components/common/PlayerBtn'
-import AddBtn from '@/Components/common/AddBtn'
+import VideoPlayerModal from '@/Components/VideoPlayerModal.jsx'
+import PlayerBtn from '@/Components/common/PlayerBtn.jsx'
+import AddBtn from '@/Components/common/AddBtn.jsx'
 
 function FeaturedShow({ fetchFunction, type = 'movie' }) {
     const [featuredShow, setFeaturedShow] = useState(null)

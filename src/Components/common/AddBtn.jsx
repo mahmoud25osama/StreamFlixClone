@@ -1,5 +1,5 @@
 import { FaPlus } from 'react-icons/fa'
-import { useMyList } from '@/CustomHooks/useMyList'
+import { useMyList } from '@/CustomHooks/useMyList.jsx'
 
 function AddBtn({ title, id, type }) {
     const { handleMyListToggle, isInMyList } = useMyList()

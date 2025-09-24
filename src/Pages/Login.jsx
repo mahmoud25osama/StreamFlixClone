@@ -4,8 +4,8 @@ import * as Yup from 'yup'
 import { FaEye, FaEyeSlash, FaSpinner } from 'react-icons/fa'
 import { NavLink, useNavigate } from 'react-router'
 import background_banner from '@/assets/bgBanner.jpg'
-import useAuth from '@/CustomHooks/useAuth'
-import Logo from '@/Components/common/Logo'
+import useAuth from '@/CustomHooks/useAuth.jsx'
+import Logo from '@/Components/common/Logo.jsx'
 
 // Validation Schema
 const loginSchema = Yup.object().shape({

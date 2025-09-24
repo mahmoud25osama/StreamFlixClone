@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router'
-import useAuth from '@/CustomHooks/useAuth'
-import Footer from '@/Components/Layout/Footer'
-import Navbar from '@/Components/Layout/Navbar'
+import useAuth from '@/CustomHooks/useAuth.jsx'
+import Footer from '@/Components/Layout/Footer.jsx'
+import Navbar from '@/Components/Layout/Navbar.jsx'
 
 function Layout() {
     const { user } = useAuth()

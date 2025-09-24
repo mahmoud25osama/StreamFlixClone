@@ -4,15 +4,15 @@ import {
     getMovieByGenre,
     getTopRated,
     getPopularMovies,
-} from '@/services/tmdbService'
+} from '@/services/tmdbService.js'
 
 import heroImage from '@/assets/heroBanner.jpg'
 import heroTitle from '@/assets/heroTitle.png'
-import TitleCards from '@/Components/TitleCards'
+import TitleCards from '@/Components/TitleCards.jsx'
 import { Link } from 'react-router'
 import { useState } from 'react'
-import VideoPlayerModal from '@/Components/VideoPlayerModal'
-import PlayerBtn from '@/Components/common/PlayerBtn'
+import VideoPlayerModal from '@/Components/VideoPlayerModal.jsx'
+import PlayerBtn from '@/Components/common/PlayerBtn.jsx'
 
 function Home() {
     const [showPlayer, setShowPlayer] = useState(false)

@@ -5,12 +5,12 @@ import {
     getMovieDetails,
     getTvDetails,
     getCredits,
-} from '@/services/tmdbService'
-import VideoPlayerModal from '@/Components/VideoPlayerModal'
-import ErrorMessage from '@/Components/common/ErrorMessage'
-import LoadingSpinner from '@/Components/common/LoadingSpinner'
-import PlayerBtn from '@/Components/common/PlayerBtn'
-import AddBtn from '@/Components/common/AddBtn'
+} from '@/services/tmdbService.js'
+import VideoPlayerModal from '@/Components/VideoPlayerModal.jsx'
+import ErrorMessage from '@/Components/common/ErrorMessage.jsx'
+import LoadingSpinner from '@/Components/common/LoadingSpinner.jsx'
+import PlayerBtn from '@/Components/common/PlayerBtn.jsx'
+import AddBtn from '@/Components/common/AddBtn.jsx'
 
 function ContentDetail() {
     const { id } = useParams()

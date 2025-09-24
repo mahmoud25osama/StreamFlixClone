@@ -1,5 +1,5 @@
 import { Navigate } from 'react-router'
-import useAuth from '@/CustomHooks/useAuth'
+import useAuth from '@/CustomHooks/useAuth.jsx'
 
 const PublicRoute = ({ children }) => {
     const { user, loading } = useAuth()

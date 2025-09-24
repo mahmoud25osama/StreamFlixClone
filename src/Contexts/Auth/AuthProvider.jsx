@@ -1,8 +1,8 @@
 // src/context/AuthProvider.jsx
 import { useState, useEffect } from 'react'
-import AuthContext from './AuthContext'
-import { supabase } from '@/supabaseClient'
-import LoadingSpinner from '@/Components/common/LoadingSpinner'
+import AuthContext from './AuthContext.jsx'
+import { supabase } from '@/supabaseClient.jsx'
+import LoadingSpinner from '@/Components/common/LoadingSpinner.jsx'
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)

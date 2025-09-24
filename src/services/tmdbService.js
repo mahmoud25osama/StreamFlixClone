@@ -1,4 +1,4 @@
-import { TMDB_API_KEY, TMDB_API_URL } from '../config'
+import { TMDB_API_KEY, TMDB_API_URL } from '@/config.js'
 
 const fetchFromTMDB = async (endpoint, params = {}) => {
     const url = new URL(`${TMDB_API_URL}${endpoint}`)

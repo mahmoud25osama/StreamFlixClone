@@ -1,7 +1,7 @@
-import { useMyList } from '@/CustomHooks/useMyList'
-import LoadingSpinner from '@/Components/common/LoadingSpinner'
-import ErrorMessage from '@/Components/common/ErrorMessage'
-import CardUi from '@/Components/common/Card'
+import { useMyList } from '@/CustomHooks/useMyList.jsx'
+import LoadingSpinner from '@/Components/common/LoadingSpinner.jsx'
+import ErrorMessage from '@/Components/common/ErrorMessage.jsx'
+import CardUi from '@/Components/common/Card.jsx'
 
 function MyList() {
     const { myList, loading } = useMyList()

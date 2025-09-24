@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { FaSearch, FaTimes } from 'react-icons/fa'
-import { searchTMDB } from '@/services/tmdbService'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router'
-import CardUi from '@/Components/common/Card'
+import { searchTMDB } from '@/services/tmdbService.js'
+import CardUi from '@/Components/common/Card.jsx'
 
 function SearchResults() {
     const [filteredResults, setFilteredResults] = useState([])

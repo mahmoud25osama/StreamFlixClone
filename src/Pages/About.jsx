@@ -1,4 +1,4 @@
-import FaqDataSection from '@/Components/common/FaqDataSection'
+import FaqDataSection from '@/Components/common/FaqDataSection.jsx'
 
 import { FaAward, FaFilm, FaGlobe, FaUsers } from 'react-icons/fa'
 

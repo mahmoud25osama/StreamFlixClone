@@ -1,6 +1,6 @@
-import { getTrendingTV, getTVByGenre } from '@/services/tmdbService'
-import TitleCards from '@/Components/TitleCards'
-import FeaturedShow from '@/Components/FeaturedShow'
+import { getTrendingTV, getTVByGenre } from '@/services/tmdbService.js'
+import TitleCards from '@/Components/TitleCards.jsx'
+import FeaturedShow from '@/Components/FeaturedShow.jsx'
 
 function TvShows() {
     return (

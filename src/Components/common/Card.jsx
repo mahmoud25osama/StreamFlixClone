@@ -1,5 +1,10 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { useMyList } from '@/CustomHooks/useMyList'
+import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card.jsx'
+import { useMyList } from '@/CustomHooks/useMyList.jsx'
 import { FaPlay, FaPlus, FaStar } from 'react-icons/fa'
 import { useNavigate } from 'react-router'
 

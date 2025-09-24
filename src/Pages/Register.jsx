@@ -11,9 +11,9 @@ import {
 } from 'react-icons/fa'
 import { NavLink, useLocation, useNavigate } from 'react-router'
 import background_banner from '@/assets/bgBanner.jpg'
-import useAuth from '@/CustomHooks/useAuth'
+import useAuth from '@/CustomHooks/useAuth.jsx'
 import { useEffect } from 'react'
-import Logo from '@/Components/common/Logo'
+import Logo from '@/Components/common/Logo.jsx'
 // Validation Schemas for each step
 const stepOneSchema = Yup.object().shape({
     email: Yup.string()

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '@/supabaseClient'
-import { getMovieDetails, getTvDetails } from '@/services/tmdbService'
-import useAuth from './useAuth'
+import { getMovieDetails, getTvDetails } from '@/services/tmdbService.js'
+import useAuth from './useAuth.jsx'
 import { toast } from 'sonner'
-import { showToast } from '@/Components/common/showToast'
+import { showToast } from '@/Components/common/showToast.jsx'
 
 export const useMyList = () => {
     const { user } = useAuth()
