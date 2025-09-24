@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router'
 import HomePage from '@/Pages/Home'
-import TVShowsPage from '@/pages/TVShows'
+import TVShowsPage from '@/Pages/TvShows'
 import MoviesPage from '@/pages/Movies'
 import NewAndPopular from '@/pages/NewAndPopular'
 import ContentDetail from '@/pages/ContentDetail'
