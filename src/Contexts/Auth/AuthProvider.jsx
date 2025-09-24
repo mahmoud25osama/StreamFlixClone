@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import AuthContext from './AuthContext'
 import { supabase } from '../../supabaseClient'
-import LoadingSpinner from '../../components/common/LoadingSpinner'
+import LoadingSpinner from '@/Components/common/LoadingSpinner'
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
