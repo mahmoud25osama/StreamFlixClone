@@ -1,5 +1,5 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import Logo from '@/Components/common/Logo'
+import Logo from '@/Components/common/Logo.jsx'
 
 function Footer() {
     return (
