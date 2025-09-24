@@ -115,47 +115,6 @@ const Register = () => {
         }
     }
 
-    const StepIndicator = () => (
-        <div className="mb-8">
-            <div className="flex items-center justify-center space-x-4">
-                {[1, 2, 3].map((step) => (
-                    <div key={step} className="flex items-center">
-                        <div
-                            className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-colors ${
-                                step < currentStep
-                                    ? 'bg-green-600 border-green-600 text-white'
-                                    : step === currentStep
-                                    ? 'bg-red-600 border-red-600 text-white'
-                                    : 'border-gray-600 text-gray-400'
-                            }`}
-                        >
-                            {step < currentStep ? <FaCheck /> : step}
-                        </div>
-                        {step < 3 && (
-                            <div
-                                className={`w-12 h-0.5 mx-2 ${
-                                    step < currentStep
-                                        ? 'bg-green-600'
-                                        : 'bg-gray-600'
-                                }`}
-                            />
-                        )}
-                    </div>
-                ))}
-            </div>
-            <div className="text-center mt-4">
-                <p className="text-gray-400 text-sm">
-                    Step {currentStep} of 4:{' '}
-                    {currentStep === 1
-                        ? 'Email Verification'
-                        : currentStep === 2
-                        ? 'Create Password'
-                        : 'Personal Information'}
-                </p>
-            </div>
-        </div>
-    )
-
     const StepOne = ({ values }) => (
         <div>
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -362,7 +321,52 @@ const Register = () => {
             <div className="flex items-center justify-center px-6 py-12">
                 <div className="w-full max-w-2xl">
                     <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 md:p-12 border border-gray-800">
-                        <StepIndicator />
+                        {/* StepIndicator  */}
+                        <div className="mb-8">
+                            <div className="flex items-center justify-center space-x-4">
+                                {[1, 2, 3].map((step) => (
+                                    <div
+                                        key={step}
+                                        className="flex items-center"
+                                    >
+                                        <div
+                                            className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-colors ${
+                                                step < currentStep
+                                                    ? 'bg-green-600 border-green-600 text-white'
+                                                    : step === currentStep
+                                                    ? 'bg-red-600 border-red-600 text-white'
+                                                    : 'border-gray-600 text-gray-400'
+                                            }`}
+                                        >
+                                            {step < currentStep ? (
+                                                <FaCheck />
+                                            ) : (
+                                                step
+                                            )}
+                                        </div>
+                                        {step < 3 && (
+                                            <div
+                                                className={`w-12 h-0.5 mx-2 ${
+                                                    step < currentStep
+                                                        ? 'bg-green-600'
+                                                        : 'bg-gray-600'
+                                                }`}
+                                            />
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="text-center mt-4">
+                                <p className="text-gray-400 text-sm">
+                                    Step {currentStep} of 3:{' '}
+                                    {currentStep === 1
+                                        ? 'Email Verification'
+                                        : currentStep === 2
+                                        ? 'Create Password'
+                                        : 'Personal Information'}
+                                </p>
+                            </div>
+                        </div>
 
                         <Formik
                             initialValues={formData}
@@ -372,7 +376,7 @@ const Register = () => {
                             }
                             enableReinitialize
                         >
-                            {({ isSubmitting, values }) => (
+                            {({ values }) => (
                                 <Form>
                                     {/* Step Content */}
                                     <div className="mb-8">
@@ -398,26 +402,16 @@ const Register = () => {
 
                                         <button
                                             type="submit"
-                                            disabled={isSubmitting}
                                             className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md transition-all duration-200 font-bold flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed flex-1 sm:flex-initial"
                                         >
-                                            {isSubmitting ? (
-                                                <>
-                                                    <FaSpinner className="animate-spin" />
-                                                    {currentStep === 3
-                                                        ? 'Creating Account...'
-                                                        : 'Processing...'}
-                                                </>
-                                            ) : (
-                                                <>
-                                                    {currentStep === 3
-                                                        ? 'Create Account'
-                                                        : 'Continue'}
-                                                    {currentStep < 3 && (
-                                                        <FaArrowRight />
-                                                    )}
-                                                </>
-                                            )}
+                                            <>
+                                                {currentStep === 3
+                                                    ? 'Create Account'
+                                                    : 'Continue'}
+                                                {currentStep < 3 && (
+                                                    <FaArrowRight />
+                                                )}
+                                            </>
                                         </button>
                                     </div>
                                 </Form>
