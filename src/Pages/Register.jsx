@@ -4,7 +4,6 @@ import * as Yup from 'yup'
 import {
     FaEye,
     FaEyeSlash,
-    FaSpinner,
     FaCheck,
     FaArrowLeft,
     FaArrowRight,
