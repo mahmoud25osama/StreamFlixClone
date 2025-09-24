@@ -4,8 +4,8 @@ import {
     CardHeader,
     CardTitle,
 } from '@/Components/ui/card.jsx'
-import { useMyList } from '@/CustomHooks/useMyList.jsx'
-import { FaPlay, FaPlus, FaStar } from 'react-icons/fa'
+import UseMyList from '@/CustomHooks/useMyList.jsx'
+import { FaPlay, FaPlus, FaStar, FaTrash } from 'react-icons/fa'
 import { useNavigate } from 'react-router'
 
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original'
@@ -39,9 +39,9 @@ const Genres = {
     10768: 'War & Politics',
 }
 
-export function CardUi({ item, type = 'movie' }) {
+export function CardUi({ item, myList = false, type = 'movie' }) {
     const navigate = useNavigate()
-    const { addToList } = useMyList()
+    const { addToList, removeFromList } = UseMyList()
 
     return (
         <Card
@@ -73,11 +73,25 @@ export function CardUi({ item, type = 'movie' }) {
                     <button
                         onClick={(e) => {
                             e.stopPropagation()
-                            addToList(item.title || item.name, item.id, type)
+                            myList
+                                ? removeFromList(
+                                      item.title || item.name,
+                                      item.id,
+                                      type
+                                  )
+                                : addToList(
+                                      item.title || item.name,
+                                      item.id,
+                                      type
+                                  )
                         }}
                         className="bg-gray-800/80 text-white cursor-pointer p-2 rounded-full border border-white/30 hover:border-white transition-colors"
                     >
-                        <FaPlus className="w-3 h-3" />
+                        {myList ? (
+                            <FaTrash className="w-3 h-3" />
+                        ) : (
+                            <FaPlus className="w-3 h-3" />
+                        )}
                     </button>
                 </div>
 

@@ -1,4 +1,4 @@
-import { useMyList } from '@/CustomHooks/useMyList.jsx'
+import useMyList from '@/CustomHooks/useMyList.jsx'
 import LoadingSpinner from '@/Components/common/LoadingSpinner.jsx'
 import ErrorMessage from '@/Components/common/ErrorMessage.jsx'
 import CardUi from '@/Components/common/Card.jsx'
@@ -25,8 +25,16 @@ function MyList() {
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                 {myList.map((item) => {
-                    const details = item.details
-                    return <CardUi item={details} type={details.type} />
+                    console.log('itemid:', item.details.id)
+
+                    return (
+                        <CardUi
+                            key={item.id}
+                            myList={true}
+                            item={item.details}
+                            type={item.details.type}
+                        />
+                    )
                 })}
             </div>
         </div>
