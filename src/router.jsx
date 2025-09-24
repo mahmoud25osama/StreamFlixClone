@@ -1,5 +1,4 @@
 import { createBrowserRouter } from 'react-router'
-import LandingPage from './pages/LandingPage'
 import HomePage from './Pages/Home'
 import TVShowsPage from './pages/TVShows'
 import MoviesPage from './pages/Movies'
@@ -16,6 +15,7 @@ import MyList from './Pages/MyList'
 import SearchResults from './Pages/SearchResults'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
+import LandingPage from './Pages/LandingPage'
 
 const router = createBrowserRouter([
     {
