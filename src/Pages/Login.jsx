@@ -15,16 +15,22 @@ const loginSchema = Yup.object().shape({
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
     const { login } = useAuth()
     const navigate = useNavigate()
 
     const handleSubmit = async (values, { setSubmitting, setFieldError }) => {
+        setIsLoading(true)
         try {
+            console.log('alvalue', values)
             await login(values.email, values.password)
+            setIsLoading(false)
+
             navigate('/browse')
         } catch (err) {
             setFieldError('email', 'Invalid username or password', err)
         } finally {
+            setIsLoading(false)
             setSubmitting(false)
         }
     }
@@ -69,7 +75,13 @@ const Login = () => {
                             validationSchema={loginSchema}
                             onSubmit={handleSubmit}
                         >
-                            {({ isSubmitting, touched, errors }) => (
+                            {({
+                                isSubmitting,
+                                touched,
+                                errors,
+                                setSubmitting,
+                                setFieldError,
+                            }) => (
                                 <Form className="space-y-6">
                                     {/* Email Field */}
                                     <div className="relative">
@@ -112,7 +124,7 @@ const Login = () => {
                                             onClick={() =>
                                                 setShowPassword(!showPassword)
                                             }
-                                            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors duration-200"
+                                            className="absolute right-4 top-1/2 transform -translate-y-1/4 text-gray-400 hover:text-gray-700 cursor-pointer transition-colors duration-200"
                                         >
                                             {showPassword ? (
                                                 <FaEyeSlash />
@@ -131,7 +143,7 @@ const Login = () => {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="w-full cursor-pointer bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {isSubmitting ? (
                                             <>
@@ -144,19 +156,47 @@ const Login = () => {
                                     </button>
 
                                     {/* Remember Me */}
-                                    <div className="flex items-center">
-                                        <Field
-                                            type="checkbox"
-                                            name="rememberMe"
-                                            id="rememberMe"
-                                            className="w-4 h-4 text-red-600 bg-gray-700 border-gray-600 rounded focus:ring-red-500 focus:ring-2"
-                                        />
-                                        <label
-                                            htmlFor="rememberMe"
-                                            className="ml-3 text-gray-300 text-sm cursor-pointer"
+                                    <div className="flex items-center justify-between">
+                                        <div className="">
+                                            <Field
+                                                type="checkbox"
+                                                name="rememberMe"
+                                                id="rememberMe"
+                                                className="w-4 h-4 text-red-600 bg-gray-700 border-gray-600 rounded focus:ring-red-500 focus:ring-2"
+                                            />
+                                            <label
+                                                htmlFor="rememberMe"
+                                                className="ml-3 text-gray-300 text-sm cursor-pointer"
+                                            >
+                                                Remember me
+                                            </label>
+                                        </div>
+                                        {/* Demo Login */}
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                handleSubmit(
+                                                    {
+                                                        email: 'asd@gmail.com',
+                                                        password: 'Asd123',
+                                                    },
+                                                    {
+                                                        setSubmitting,
+                                                        setFieldError,
+                                                    }
+                                                )
+                                            }
+                                            className=" cursor-pointer bg-red-600 hover:bg-red-700 text-white font-bold p-2 rounded-md transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
-                                            Remember me
-                                        </label>
+                                            {isLoading ? (
+                                                <>
+                                                    <FaSpinner className="animate-spin" />
+                                                    Signing In...
+                                                </>
+                                            ) : (
+                                                'Demo User'
+                                            )}
+                                        </button>
                                     </div>
                                 </Form>
                             )}

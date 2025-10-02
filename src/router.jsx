@@ -1,22 +1,23 @@
 import { lazy } from 'react'
 import { createBrowserRouter } from 'react-router'
-const Home = lazy(() => import('@/Pages/Home.jsx'))
+import Home from '@/Pages/Home.jsx'
+import Layout from '@/Pages/Layout.jsx'
+import Register from '@/Pages/Register.jsx'
+import Login from '@/Pages/Login.jsx'
+import NotFoundPage from '@/Pages/NotFoundPage.jsx'
+import LandingPage from '@/Pages/LandingPage.jsx'
+import ProtectedRoute from '@/Components/ProtectedRoute.jsx'
+import PublicRoute from '@/Components/PublicRoute.jsx'
+import VideoPlayerModal from '@/Components/VideoPlayerModal.jsx'
+// Lazy loaded Pages
 const TvShows = lazy(() => import('@/Pages/TvShows.jsx'))
 const Movies = lazy(() => import('@/Pages/Movies.jsx'))
 const NewAndPopular = lazy(() => import('@/Pages/NewAndPopular.jsx'))
 const ContentDetail = lazy(() => import('@/Pages/ContentDetail.jsx'))
-const NotFoundPage = lazy(() => import('@/Pages/NotFoundPage.jsx'))
-const Layout = lazy(() => import('@/Pages/Layout.jsx'))
-const Register = lazy(() => import('@/Pages/Register.jsx'))
-const Login = lazy(() => import('@/Pages/Login.jsx'))
 const MyList = lazy(() => import('@/Pages/MyList.jsx'))
-const SearchResults = lazy(() => import('@/Pages/SearchResults.jsx'))
+import SearchResults from '@/Pages/SearchResults.jsx'
 const About = lazy(() => import('@/Pages/About.jsx'))
 const Contact = lazy(() => import('@/Pages/Contact.jsx'))
-const LandingPage = lazy(() => import('@/Pages/LandingPage.jsx'))
-const ProtectedRoute = lazy(() => import('@/Components/ProtectedRoute.jsx'))
-const PublicRoute = lazy(() => import('@/Components/PublicRoute.jsx'))
-const VideoPlayerModal = lazy(() => import('@/Components/VideoPlayerModal.jsx'))
 
 const router = createBrowserRouter([
     {
